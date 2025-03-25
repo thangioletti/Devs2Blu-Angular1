@@ -1,0 +1,9 @@
+<div>
+  <h1>Cidades</h1>
+  <p>Lista de cidades</p>
+</div>
+<div class="c-container-container">
+    @for (cidade of cidades; track cidade) {
+        <app-card [cidade]="cidade"></app-card>    
+    }
+</div>
