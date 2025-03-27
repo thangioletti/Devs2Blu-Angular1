@@ -1,0 +1,15 @@
+<div class="p-6">
+    <div class="grid grid-cols-4 gap-4">
+        @for (product of products; track product) {
+            <app-product-item [product]="product" (added)="addToChart($event)"></app-product-item>
+        }
+    </div>
+</div>
+<div class="p-6">
+    <h1 class="text-4xl"> Carrinho </h1>
+    <div class="grid grid-cols-4 gap-4">
+        @for (product of carrinho; track product) {
+            <app-product-item [product]="product"></app-product-item>
+        }
+    </div>
+</div>

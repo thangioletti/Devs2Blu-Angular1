@@ -1,0 +1,15 @@
+<div
+  class="c-product-item-container rounded-2xl flex flex-col items-center p-6"
+>
+  <div class="flex justify-end w-full text-amber-300 h-[30px]">
+    @if (product.highlight) {
+    <i class="las la-star"></i>
+    }
+  </div>
+  <img [src]="product?.image" alt="Imagem do produto" class="max-h-[150px]" />
+  <div class="mt-4 h-[50px]">{{ product?.name }}</div>
+  <div class="mt-4 text-2xl">{{ product?.price | currency: "BRL"}}</div>
+  
+  <button class="btn mt-4" (click)="addChart()">Adicionar ao carrinho</button>
+  <button class="btn mt-4" [routerLink]="['/produtos', product?.name]">Visualizer produto</button>
+</div>
